@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="assets/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/style.css" />
+
+    <title>Evaly Cashback Calculator</title>
+  </head>
+
+  <body>
+    <div class="jumbotron text-center">
+      <h1 class="display-3">Evaly Cashback Calculator</h1>
+      <h5>
+        <small>Add your desire product price & cashback %.</small>
+      </h5>
+    </div>
+
+    <section id="calculator">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <form>
+              <div class="form-row align-items-center">
+                <div class="col-lg-5 col-md-4">
+                  <label class="sr-only" for="proPrice">Product Price</label>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">৳</div>
+                    </div>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="proPrice"
+                      placeholder="Price"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-5 col-md-4">
+                  <label class="sr-only" for="discountRate">Discount %</label>
+                  <div class="input-group mb-2">
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="discountRate"
+                      placeholder="Cashback"
+                    />
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">%</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-xs-12 text-center">
+                  <button
+                    id="submit"
+                    type="submit"
+                    class="btn btn-success mb-2"
+                  >
+                    Check Price
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="row mt-2 message">
+          <div class="col-md-12">
+            <div class="alert alert-warning" role="alert">
+              Sorry folk, Evaly offer maximum
+              <strong>100%</strong> cashback. Please try again.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="results">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mt-5">
+            <div id="fullPayment" class="card">
+              <div class="card-header">
+                Full Payment
+              </div>
+              <div class="card-body">
+                <p class="card-text">
+                  If you pay full <span class="amount">100</span>TK then you'll
+                  get <span class="cashback">100</span>TK cashback for
+                  <span class="discount">100</span>% cashback offer. So your
+                  product price will be <span class="price">0</span>TK.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12 mt-3">
+            <div id="partialPayment" class="card">
+              <div class="card-header">
+                Partial Payment
+              </div>
+              <div class="card-body">
+                For partial payment, you've to pay
+                <span class="amount">50</span>TK for
+                <span class="discount">100</span>% cashback offer. So you'll get
+                <span class="price">50</span>TK discount.
+              </div>
+            </div>
+          </div>
+
+          <div class="row mx-auto mt-5">
+            <div class="col-md-12">
+              <button class="btn btn-danger" id="reset">Check Another</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="jumbotron text-center">
+        <p>
+          <span class="price">❤</span> Dev by
+          <a href="//nexyta.com">TeamNexyta</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="assets/main.js"></script>
+  </body>
+</html>
