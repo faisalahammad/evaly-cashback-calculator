@@ -10,26 +10,27 @@ reset.style.display = "none";
 function quicker(handler, update) {
   return (document.querySelector(handler).innerText = update);
 }
+
 function showHide(kihobe) {
   document.querySelector("#fullPayment").style.display = kihobe;
   document.querySelector("#partialPayment").style.display = kihobe;
 }
 
 // Get Form data
-submit.addEventListener("click", function(e) {
+submit.addEventListener("click", function (e) {
   let productPrice = parseFloat(document.querySelector("#proPrice").value);
   let discountRate = parseFloat(document.querySelector("#discountRate").value);
 
   // Calculate Discount
   let discountPayment = Math.round(productPrice / (discountRate / 100 + 1)); // Payment amount
   let discountGet = productPrice - discountPayment; // Total discount amount
-  let cashbackAmount = productPrice * (discountRate / 100);
+  let cashbackAmount = (productPrice * (discountRate / 100)).toFixed(0);
   let cashbackFullPay = productPrice - cashbackAmount;
 
   if (discountRate == 0 || discountRate > 100) {
     document.querySelector(".message").style.display = "block";
     showHide("none"); // Hide
-    setTimeout(function() {
+    setTimeout(function () {
       document.querySelector(".message").style.display = "none";
     }, 3000);
   } else {
@@ -52,7 +53,7 @@ submit.addEventListener("click", function(e) {
 });
 
 // Reset / Reload page
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   location.reload();
   document.querySelector("#proPrice").value = "";
   document.querySelector("#discountRate").value = "";
