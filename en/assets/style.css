@@ -1,0 +1,50 @@
+.jumbotron {
+  padding: 30px 0;
+}
+
+.jumbotron h1 {
+  font-size: 46px;
+}
+
+#calculator {
+  margin-top: 80px;
+}
+
+.card .card-header {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.cashback,
+.price,
+.discount,
+.amount {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+footer {
+  margin-top: 100px;
+}
+
+footer .jumbotron {
+  padding: 20px 0;
+}
+footer .jumbotron p {
+  margin-bottom: 0;
+}
+
+@media all and (max-width: 480px) {
+  .jumbotron h1 {
+    font-size: 28px;
+  }
+  .jumbotron h5 small {
+    font-size: 14px;
+  }
+  #calculator {
+    margin-top: 60px;
+  }
+  footer {
+    margin-top: 50px;
+  }
+}
