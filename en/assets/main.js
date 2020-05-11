@@ -2,8 +2,7 @@ let submit = document.querySelector("button#submit");
 let reset = document.querySelector("button#reset");
 
 // Hide by default
-document.querySelector(".message1").style.display = "none";
-document.querySelector(".message2").style.display = "none";
+document.querySelector(".message").style.display = "none";
 showHide("none");
 reset.style.display = "none";
 
@@ -29,16 +28,10 @@ submit.addEventListener("click", function (e) {
   let cashbackFullPay = productPrice - cashbackAmount;
 
   if (discountRate == 0 || discountRate > 100) {
-    document.querySelector(".message1").style.display = "block";
+    document.querySelector(".message").style.display = "block";
     showHide("none"); // Hide
     setTimeout(function () {
-      document.querySelector(".message1").style.display = "none";
-    }, 3000);
-  } else if (discountRate.length == 0 || discountRate < 0) {
-    document.querySelector(".message2").style.display = "block";
-    showHide("none"); // Hide
-    setTimeout(function () {
-      document.querySelector(".message2").style.display = "none";
+      document.querySelector(".message").style.display = "none";
     }, 3000);
   } else {
     // Full Payment
