@@ -54,6 +54,10 @@ label,
   color: #c3232a;
 }
 
+.jumbotron h5 {
+  color: #c3232a;
+}
+
 #calculator {
   margin-top: 80px;
 }
@@ -136,7 +140,7 @@ details summary {
   font-size: 22px;
 }
 
-details p {
+details p.text {
   font-size: 18px;
   margin-top: 5px;
   padding-top: 10px;
