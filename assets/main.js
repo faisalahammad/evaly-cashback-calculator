@@ -28,7 +28,13 @@ submit.addEventListener("click", function (e) {
   let cashbackAmount = (productPrice * (discountRate / 100)).toFixed(0);
   let cashbackFullPay = productPrice - cashbackAmount;
 
-  if (discountRate == 0 || discountRate > 100) {
+  if (discountRate > 100) {
+    document.querySelector("#bigDisc").style.display = "none";
+  } else {
+    document.querySelector("#bigDisc").style.display = "inline-block";
+  }
+
+  if (discountRate == 0 || discountRate > 150) {
     document.querySelector(".message1").style.display = "block";
     showHide("none"); // Hide
     setTimeout(function () {
