@@ -30,8 +30,10 @@ submit.addEventListener("click", function (e) {
 
   if (discountRate > 100) {
     document.querySelector("#bigDisc").style.display = "none";
+    // document.querySelector(".megaDays").style.display = "inline-block";
   } else {
     document.querySelector("#bigDisc").style.display = "inline-block";
+    // document.querySelector(".megaDays").style.display = "none";
   }
 
   if (discountRate == 0 || discountRate > 150) {
